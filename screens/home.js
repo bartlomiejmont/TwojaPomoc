@@ -5,11 +5,13 @@ import {
 } from 'react-native';
 
 import Header from '../components/Header'
+import ButtonComponent from '../components/ButtonComponent';
 
 const Home =() =>{
   return (
     <View style={styles.container}>
         <Header/>
+        <ButtonComponent/>
     </View>
   );
 };

@@ -1,11 +1,8 @@
 import React from'react';
 import {
-  View,
-  Text,
   StyleSheet,
 } from 'react-native';
 
-import Header from './components/Header'
 import Navigator from './routes/homeStack';
 
 const App =() =>{
@@ -17,8 +14,15 @@ const App =() =>{
 const styles = StyleSheet.create({
   container: {
     flex:1,
-    paddingTop:60,
+    padding: 30,
+    justifyContent: "space-between",
+    backgroundColor: "#ae81ff",
   },
+
+  button:{
+    flex: 0.8,
+  }
+
 
 });
 
