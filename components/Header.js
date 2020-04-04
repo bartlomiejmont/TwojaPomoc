@@ -15,12 +15,13 @@ const Header = () =>{
 
 const styles = StyleSheet.create({
   header: {
+    flex: 0.2,
     height: 60,
     padding: 15,
     backgroundColor:'darkslateblue',
     },
     text: {
-        fontSize: 25,
+        fontSize: 40,
         textAlign: "center",
         color: "#fff"
     }
