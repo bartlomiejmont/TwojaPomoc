@@ -1,16 +1,16 @@
 import React from'react';
 import {
   View,
-  Text,
   StyleSheet,
 } from 'react-native';
 
-import Header from './components/Header'
-import Navigator from './routes/homeStack';
+import Header from '../components/Header'
 
-const App =() =>{
+const Home =() =>{
   return (
-    <Navigator/>
+    <View style={styles.container}>
+        <Header/>
+    </View>
   );
 };
 
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default App;
+export default Home;
