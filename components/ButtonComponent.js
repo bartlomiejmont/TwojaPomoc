@@ -12,11 +12,11 @@ const ButtonComponent = () =>{ //
   return (
     <View style={styles.viewStyle}>
       
-    <TouchableOpacity style={styles.button1}>
+    <TouchableOpacity style={styles.button}>
       <Text style={styles.text}>Chcę Pomagać</Text>
     </TouchableOpacity>
 
-    <TouchableOpacity style={styles.button2}>
+    <TouchableOpacity style={styles.button}>
       <Text style={styles.text}>Potrzebuje Pomocy</Text>
     </TouchableOpacity>
 
@@ -25,17 +25,11 @@ const ButtonComponent = () =>{ //
 };
 
 const styles = StyleSheet.create({
-  button1: {
+  button: {
     flex: 0.45,
     justifyContent: "center",
     backgroundColor: "#68228b",
     },
-
-    button2: {
-      flex: 0.45,
-      justifyContent: "center",
-      backgroundColor: "#68228b",
-      },
 
   viewStyle: {
 
