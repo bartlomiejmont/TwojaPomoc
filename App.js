@@ -1,21 +1,14 @@
 import React from'react';
 import {
-  View,
-  Text,
   StyleSheet,
 } from 'react-native';
 
-import Header from './components/Header'
-import ButtonComponent from './components/ButtonComponent';
+import Navigator from './routes/homeStack';
 
 const App =() =>{
   return (
-    <View style={styles.container}>
-        <Header/>
-
-        <ButtonComponent style={styles.button}/>
-    </View>
-  )
+    <Navigator/>
+  );
 };
 
 const styles = StyleSheet.create({
