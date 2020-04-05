@@ -1,24 +1,24 @@
-import React, { useState } from'react';
+import React, { useState, useEffect } from'react';
 import {
   View,
   ActivityIndicator,
-  Text
+  Text,
+  FlatList
 } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
 
 
-const GiveHelp =() =>{
+const GiveHelp = () => {
 
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
-  function getRequests() {
-    return fetch ('http://localhost:8080/requests')
+   useEffect(() => {
+    fetch ('http://localhost:8080/requests')
     .then((response) => response.json())
     .then((json) => setData(json))
     .catch((error) => console.error(error))
     .finally(() => setLoading(false))
-  }
+  });
 
   return (
     <View >
