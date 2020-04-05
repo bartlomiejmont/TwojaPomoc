@@ -8,15 +8,23 @@ import {
 
 } from 'react-native';
 
-const ButtonComponent = () =>{ //
+const ButtonComponent = ({nav}) =>{ 
+
+  const pressHandlerNeedHelp = () =>{
+    nav.push('Potrzebuje Pomocy');
+  }
+  const pressHandlerGiveHelp = () =>{
+    nav.push('Chce Pomoc');
+  }
+
   return (
     <View style={styles.viewStyle}>
       
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={pressHandlerGiveHelp}>
       <Text style={styles.text}>Chcę Pomagać</Text>
     </TouchableOpacity>
 
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={pressHandlerNeedHelp}>
       <Text style={styles.text}>Potrzebuje Pomocy</Text>
     </TouchableOpacity>
 

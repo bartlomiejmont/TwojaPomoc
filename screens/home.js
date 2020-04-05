@@ -7,11 +7,11 @@ import {
 import Header from '../components/Header'
 import ButtonComponent from '../components/ButtonComponent';
 
-const Home =() =>{
+const Home = ({ navigation }) =>{
   return (
     <View style={styles.container}>
         <Header/>
-        <ButtonComponent/>
+        <ButtonComponent nav={navigation} />
     </View>
   );
 };
