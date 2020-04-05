@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     flex: 0.45,
     justifyContent: "center",
     backgroundColor: "#68228b",
+    width: '80%',
     },
 
   viewStyle: {
@@ -37,7 +38,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingTop: 150,
     paddingBottom: 150,
-  
+    alignItems: "center",
+    
   },
 
   text: {
@@ -46,8 +48,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: "center",
     color: "white",
-    justifyContent: "center",
-    alignItems: "center",
 
   }
 
