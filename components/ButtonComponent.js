@@ -8,15 +8,23 @@ import {
 
 } from 'react-native';
 
-const ButtonComponent = () =>{ //
+const ButtonComponent = ({nav}) =>{ 
+
+  const pressHandlerNeedHelp = () =>{
+    nav.push('Potrzebuje Pomocy');
+  }
+  const pressHandlerGiveHelp = () =>{
+    nav.push('Chce Pomoc');
+  }
+
   return (
     <View style={styles.viewStyle}>
       
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={pressHandlerGiveHelp}>
       <Text style={styles.text}>Chcę Pomagać</Text>
     </TouchableOpacity>
 
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={pressHandlerNeedHelp}>
       <Text style={styles.text}>Potrzebuje Pomocy</Text>
     </TouchableOpacity>
 
@@ -29,6 +37,7 @@ const styles = StyleSheet.create({
     flex: 0.45,
     justifyContent: "center",
     backgroundColor: "#68228b",
+    width: '80%',
     },
 
   viewStyle: {
@@ -37,7 +46,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingTop: 150,
     paddingBottom: 150,
-  
+    alignItems: "center",
+    
   },
 
   text: {
@@ -46,8 +56,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: "center",
     color: "white",
-    justifyContent: "center",
-    alignItems: "center",
 
   }
 

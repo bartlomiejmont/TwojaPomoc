@@ -1,23 +1,20 @@
 import React from'react';
 import {
-  View,
-  Text,
   StyleSheet,
 } from 'react-native';
+
 
 import Header from './components/Header'
 import ButtonComponent from './components/ButtonComponent'
 import OldView from './components/OldView'
 
+import Navigator from './routes/homeStack';
+
 const App =() =>{
   return (
-    <View style={styles.container}>
+    <Navigator/>
+  );
 
-        {/* <Header/>
-        <ButtonComponent style={styles.button}/> */}
-        <OldView/>
-    </View>
-  )
 };
 
 const styles = StyleSheet.create({
