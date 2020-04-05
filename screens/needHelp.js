@@ -4,12 +4,13 @@ import {
   StyleSheet,
   Text
 } from 'react-native';
+import OldView from '../components/OldView';
 
 
 const NeedHelp =() =>{
   return (
     <View >
-        <Text>Need Help</Text>
+        <OldView></OldView>
     </View>
   );
 };
