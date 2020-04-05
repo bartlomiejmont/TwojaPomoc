@@ -1,15 +1,35 @@
-import React from'react';
+import React, { useState, useEffect } from'react';
 import {
   View,
-  StyleSheet,
-  Text
+  ActivityIndicator,
+  Text,
+  FlatList
 } from 'react-native';
 
 
-const GiveHelp =() =>{
+const GiveHelp = () => {
+
+  const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+
+   useEffect(() => {
+    fetch ('http://localhost:8080/requests')
+    .then((response) => response.json())
+    .then((json) => setData(json))
+    .catch((error) => console.error(error))
+    .finally(() => setLoading(false))
+  });
+
   return (
     <View >
-        <Text>Give Help</Text>
+      {isLoading ? <ActivityIndicator/> : (
+        <FlatList data={data} 
+        keyExtractor={({id},index) => id}
+        renderItem={({item}) => (
+        <Text>{item.city}</Text>
+        )}
+        />
+      )}
     </View>
   );
 };
